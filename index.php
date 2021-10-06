@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 
-<body>
+<body > 
     <?php 
     include("include/header.php");
 ?>
@@ -18,17 +18,17 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-4 mx-1 shadow">
-                    <img src="images/hack.jpg" style="width:100%">
+                    <img src="images/docs.jpg" style="width:100%; height:50vh">
 
                     <h5 class="text-center">Click on the button for more information</h5>
 
                     <a href="">
-                        <button class="btn btn-success my-3" style="margin-left:120px">More Information</button>
+                        <button class="btn btn-success my-3" style="margin-left:120px; ">More Information</button>
                     </a>
                 </div>
 
                 <div class="col-md-4 mx-1 shadow">
-                    <img src="images/hack.jpg" style="width:100%">
+                    <img src="images/doc.jpg" style="width:100%; height:50vh">
 
                     <h5 class="text-center">Créer un compte si vous n'en possédez pas</h5>
 
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="col-md-4 mx-1 shadow">
-                    <img src="images/hack.jpg" style="width:100%">
+                    <img src="images/pat.jpg" style="width:100%; height:50vh">
                     
                     <h5 class="text-center">We are employing for doctors</h5>
 

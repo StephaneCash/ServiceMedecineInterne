@@ -17,7 +17,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="index.php" class="navbar-brand" title="Médecine Interne">
-                    Service Médecine Interne
+                    <i class="glyphicon glyphicon-home" style="font-size:19s    px"></i> Service Médecine Interne
                 </a>
             </div>
 
@@ -26,8 +26,8 @@
                     if(isset($_SESSION['admin'])){
                         $user = $_SESSION['admin'];
                         echo "
-                            <li class='nav-item'><a href='#' title='Admin' class='nav-link' >$user</a></li>
-                            <li class='nav-item'><a href='../admin/logout.php' title='Docteur' class='nav-link' >Se déconnecter</a></li>
+                            <li class='nav-item'><a href='#' title='Admin' class='nav-link' ><i class='fa fa-user'></i> $user</a></li>
+                            <li class='nav-item'><a href='../admin/logout.php' title='Docteur' class='nav-link'> <i class='glyphicon glyphicon-log-out'></i> Se déconnecter</a></li>
                         ";
                     }else{
                         echo "

@@ -49,19 +49,21 @@
 </head>
 
 <style>
-   label{
-       font-size:15px;
-   }
-   .IconeUser{
-       font-size:75px;
-   }
-   input[type="submit"]{
-       padding:10px;
-       font-family: Arial;
-       width:100%;
-       margin-top:20px;
-       margin-bottom: 40px;
-   }
+label {
+    font-size: 15px;
+}
+
+.IconeUser {
+    font-size: 75px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    font-family: Arial;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 </style>
 
 <body>
@@ -76,29 +78,31 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6 jumbotron" >
+                <div class="col-md-6 jumbotron">
                     <span class="glyphicon glyphicon-user" style="font-size:64px;"></span>
                     <h4>Connexion</h4>
                     <form method="post" class="my-2">
 
-                       <div>
+                        <div>
                             <?php if(!empty($error['admin'])){?>
-                                <div class="alert alert-danger">
-                                    <?php 
+                            <div class="alert alert-danger">
+                                <?php 
                                         $show = $error['admin'];
                                         echo $show;
-                                    ?> 
-                                </div>
+                                    ?>
+                            </div>
                             <?php } ?>
                         </div>
 
                         <div class="form-group">
                             <label>Votre username</label>
-                            <input type="text" name="username" class="form-control" autocomplete="off" placeholder="Entrer votre username">
+                            <input type="text" name="username" class="form-control" autocomplete="off"
+                                placeholder="Entrer votre username">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Entrer votre password">
+                            <input type="password" name="password" class="form-control" autocomplete="off"
+                                placeholder="Entrer votre password">
                         </div>
                         <input type="Submit" name="login" class="btn btn-success" value="Se connecter">
                     </form>
