@@ -61,6 +61,7 @@
                                             <tr>
                                                 <td>$id</td>
                                                 <td>$username</td>
+                                                <td>$photo</td>
                                                 <td>
                                                     <a href='admin.php?id=$id'><button id='$id' class='btn btn-danger remove'>
                                                        <i class='fa fa-trash'></i>
