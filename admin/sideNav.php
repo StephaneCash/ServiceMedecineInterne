@@ -27,9 +27,13 @@
 <body>
     <!-- SideNav -->
     <div class="list-group bg-info ListeSide">
-        <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
+        <a href="index.php" class="list-group-item list-group-item-action bg-info text-center nav-link"
             style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
             <i class="fa fa-dashboard"></i> Dashboard
+        </a>
+        <a href="profile.php" class="list-group-item list-group-item-action bg-info text-center nav-link"
+            style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
+            <i class="fa fa-user"></i> Profile
         </a>
         <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
             style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
