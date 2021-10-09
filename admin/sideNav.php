@@ -19,34 +19,35 @@
     width: 170px;
     text-align: center;
     line-height: 70px;
-    z-index: 1px;
 }
 
 </style>
 
 <body>
     <!-- SideNav -->
-    <div class="list-group bg-info ListeSide">
+    <div class="list-group bg-info ListeSide" >
+        <div class="ab">
         <a href="index.php" class="list-group-item list-group-item-action bg-info text-center nav-link"
             style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
             <i class="fa fa-dashboard"></i> Dashboard
         </a>
         <a href="profile.php" class="list-group-item list-group-item-action bg-info text-center nav-link"
-            style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
-            <i class="fa fa-user"></i> Profile
+            style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma;">
+            <i class="fa fa-user" style="margin-left:-40px"></i> <span>Profile</span>
         </a>
         <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
             style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
-            <i class="fa fa-cog"></i> Administra
+            <i class="fa fa-cog" style="margin-left:-8px"></i> Administra
         </a>
         <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
             style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
-            <i class="fa fa-user-md"></i>  Docteurs
+            <i class="fa fa-user-md" style="margin-left:-20px"></i>  Docteurs
         </a>
         <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
             style="background-color: #222222; color:silver; border-left-color: black; font-size:17px; font-family: Tahoma">
-            <i class="fa fa-medkit"></i> Patients
+            <i class="fa fa-medkit" style="margin-left:-24px" ></i> Patients
         </a>
+        </div>
     </div>
 </body>
 
