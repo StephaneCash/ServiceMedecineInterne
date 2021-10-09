@@ -59,7 +59,7 @@
         $_SESSION['success'] = "";
 
         header("Location:profile.php");
-    } 
+    }
     if($username != $usernameEx){
 
         $query = "UPDATE admin SET username='$username' WHERE username='$admin' ";
@@ -72,7 +72,7 @@
 
             header("Location:profile.php");
         }
-    }else{
+    } else {
         header("Location:profile.php");
     }
     

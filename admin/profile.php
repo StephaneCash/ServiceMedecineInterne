@@ -77,7 +77,7 @@
                                         <input type='password' class="form-control" name="password2" style='width:60%'>
                                      <br>
                                      <input type="submit" name="change" class="btn btn-success" value="Editer">
-                                     <div style="padding: 10px; margin-top: 10px;">
+                                     <div id="contenu" style="padding: 10px; margin-top: 10px;">
                                          <?php 
                                             if(isset($_SESSION['error'])){
                                                 $msgError = $_SESSION['error'];
@@ -98,5 +98,10 @@
             </div>
         </div>
     </div>
+
+    <script>
+        
+    </script>
+
 </body>
 </html>
