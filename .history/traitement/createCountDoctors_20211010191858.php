@@ -39,14 +39,12 @@ if (isset($_POST['apply'])) {
 
         if ($result) {
 
-            //header("Location:../doctorLogin.php");
-
-            echo "Votre compte a été créé avec succès <a href>Cliquer ici pour vous connecter</a>";
+            header("Location:../doctorLogin.php");
 
         } else {
 
             header("Location:../apply.php");
-
+            
         }
     }
 

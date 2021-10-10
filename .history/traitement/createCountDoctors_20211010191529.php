@@ -39,14 +39,13 @@ if (isset($_POST['apply'])) {
 
         if ($result) {
 
-            //header("Location:../doctorLogin.php");
+            echo " <script> alert('Vous êtes connecté en ADMIN')</script> ";
 
-            echo "Votre compte a été créé avec succès <a href>Cliquer ici pour vous connecter</a>";
+            header("Location:../doctorLogin.php");
 
         } else {
-
+            echo "<script>alert('Création de compte a échoué')</script>";
             header("Location:../apply.php");
-
         }
     }
 
