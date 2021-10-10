@@ -80,7 +80,7 @@ input[type="submit"] {
                 <div class="col-md-3"></div>
                 <div class="col-md-6 jumbotron">
                     <span class="glyphicon glyphicon-user" style="font-size:64px;"></span>
-                    <h4>Connexion</h4>
+                    <h4>Connexion ADMIN</h4>
                     <form method="post" class="my-2">
 
                         <div>

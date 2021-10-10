@@ -32,7 +32,7 @@
                     }else{
                         echo "
                             <li class='nav-item'><a href='adminLogin.php' title='Admin' class='nav-link' >Admin</a></li>
-                            <li class='nav-item'><a href='' title='Docteur' class='nav-link' >Docteur</a></li>
+                            <li class='nav-item'><a href='doctorLogin.php' title='Docteur' class='nav-link' >Docteur</a></li>
                             <li class='nav-item'><a href='' title='Patient' class='nav-link' ;>Patient</a></li>
                         ";
                     }

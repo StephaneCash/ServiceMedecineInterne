@@ -76,7 +76,7 @@
                                         <label>Confirmer le nouveau mot de passe</label>
                                         <input type='password' class="form-control" name="password2" style='width:60%'>
                                      <br>
-                                     <input type="submit" name="change" class="btn btn-success" value="Editer">
+                                     <input type="submit" id="update" name="change" class="btn btn-success" value="Editer">
                                      <div id="contenu" style="padding: 10px; margin-top: 10px;">
                                          <?php 
                                             if(isset($_SESSION['error'])){
@@ -100,7 +100,17 @@
     </div>
 
     <script>
-        
+        document.getElementById("update").addEventListener("click", function(){
+
+            let cont = document.getElementById('contenu');
+
+            setTimeout(() => {
+
+                if(getComputedStyle(cont).display == "block"){
+                cont.style.display = "none";
+            }
+            }, 3000);
+        })
     </script>
 
 </body>
