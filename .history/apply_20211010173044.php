@@ -13,7 +13,6 @@
 <style>
 label {
     font-size: 15px;
-    font-family: Segoe UI;
 }
 
 .IconeUser {
@@ -37,7 +36,7 @@ input[type="submit"] {
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6 my-3 jumbotron" style="padding:40px; margin-top:80px;">
+            <div class="col-md-6 my-3 jumbotron" style="padding:70px; margin-top:80px;">
                 <h2>Apply Now !!</h2>
                 
                 <form>

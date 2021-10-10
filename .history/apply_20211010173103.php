@@ -13,7 +13,6 @@
 <style>
 label {
     font-size: 15px;
-    font-family: Segoe UI;
 }
 
 .IconeUser {
