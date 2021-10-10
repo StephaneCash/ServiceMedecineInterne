@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -43,25 +39,15 @@ input[type="submit"] {
             <div class="col-md-3"></div>
             <div class="col-md-6 my-3 jumbotron" style="margin-top:80px;">
                 <h2 style="text-align:center">Apply Now !!</h2>
-
-                <?php 
-                    if(isset($_SESSION['apply'])){
-                        $msgError = $_SESSION['apply'] ;
-                    }else{
-                        $msgError = "";
-                    }
-                ?>
-
-                <?php echo "<div class='text-center alert alert-danger'>$msgError</div>"; ?>
                 
-                <form method="post" action="traitement/createCountDoctors.php">
+                <form>
                     <div class="form-group">
                         <label>Noms complets </label>
-                        <input  type="text" name="noms" class="form-control" placeholder="Entrer votre nom">
+                        <input required type="text" name="noms" class="form-control" placeholder="Entrer votre nom">
                     </div>
                     <div class="form-group">
                         <label>Nom d'utilisateur </label>
-                        <input  type="text" name="username" class="form-control" placeholder="Entrer votre nom">
+                        <input required type="text" name="username" class="form-control" placeholder="Entrer votre nom">
                     </div>
 
                     <div class="form-group">
@@ -71,7 +57,7 @@ input[type="submit"] {
 
                     <div class="form-group">
                         <label>Genre </label>
-                        <select name="genre" class="form-control" > 
+                        <select name="genre" class="form-control" required> 
                             <option>Genre</option>
                             <option>Femme</option>
                             <option>Homme</option>
@@ -80,17 +66,17 @@ input[type="submit"] {
 
                     <div class="form-group">
                         <label>Téléphone </label>
-                        <input type="number" name="phone" class="form-control" placeholder="Entrer votre Téléphone">
+                        <input required type="number" name="telephone" class="form-control" placeholder="Entrer votre Téléphone">
                     </div>
 
                     <div class="form-group">
                         <label>Créer un mot de passe </label>
-                        <input  type="password" name="password1" class="form-control" placeholder="Entrer un mot de passe">
+                        <input required type="password" name="password1" class="form-control" placeholder="Entrer un mot de passe">
                     </div>
 
                     <div class="form-group">
                         <label>Confirmer votre mot de passe </label>
-                        <input  type="password" name="password2" class="form-control" placeholder="Confirm password">
+                        <input required type="password" name="password2" class="form-control" placeholder="Confirm password">
                     </div>
 
                     <input type="submit" name="apply" value="Créer un compte" class="btn btn-success">

@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -51,8 +47,6 @@ input[type="submit"] {
                         $msgError = "";
                     }
                 ?>
-
-                <?php echo "<div class='text-center alert alert-danger'>$msgError</div>"; ?>
                 
                 <form method="post" action="traitement/createCountDoctors.php">
                     <div class="form-group">

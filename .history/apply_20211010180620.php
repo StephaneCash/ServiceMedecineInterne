@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -43,16 +39,6 @@ input[type="submit"] {
             <div class="col-md-3"></div>
             <div class="col-md-6 my-3 jumbotron" style="margin-top:80px;">
                 <h2 style="text-align:center">Apply Now !!</h2>
-
-                <?php 
-                    if(isset($_SESSION['apply'])){
-                        $msgError = $_SESSION['apply'] ;
-                    }else{
-                        $msgError = "";
-                    }
-                ?>
-
-                <?php echo "<div class='text-center alert alert-danger'>$msgError</div>"; ?>
                 
                 <form method="post" action="traitement/createCountDoctors.php">
                     <div class="form-group">
