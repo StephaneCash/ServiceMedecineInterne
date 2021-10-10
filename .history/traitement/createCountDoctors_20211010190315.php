@@ -13,7 +13,7 @@ if (isset($_POST['apply'])) {
     $password1 = $_POST['password1'];
     $password2 = $_POST['password2'];
 
-    $error = array();
+   . $error = array();
 
     if (empty($noms)) {
         $error['apply'] = "Entrer vos noms svp !";
@@ -32,8 +32,8 @@ if (isset($_POST['apply'])) {
     }
 
     if (count($error) == 0) {
-        $query = "INSERT INTO doctors (noms, username, email, genre, phone, password, salaire, data_reg, status, profile)
-            VALUES('$noms', '$username', '$email', '$genre', '$phone', '$password1', '0', NOW(), 'En attente', 'cash.jpg')";
+        $query = "INSERT INTO doctors (noms, username, email, genre, phone, password, salaire, data, status, profile)
+            VALUES('$noms', '$username', '$email', '$genre', '$phone', '$phone', '$password1', '0', NOW(), 'En attente', 'cash.jpg')";
 
         $result = mysqli_query($connect, $query);
 
@@ -44,7 +44,7 @@ if (isset($_POST['apply'])) {
 
         } else {
             echo "<script>alert('Création de compte a échoué')</script>";
-            header("Location:../apply.php");
+            header("Location:../doctorLogin.php");
         }
     }
 

@@ -46,6 +46,8 @@
                                              <th style='width:10%'>#</th>
                                              <th >Username</th>
                                              <th style='width:10%'>Actions</th>
+                                         
+                                     
                                      ";
                                      if(mysqli_num_rows($res) < 1){
                                          $output .= "<tr><td colspan='3' style='text-align:center'> Pas d'admins !</td></tr>";
@@ -64,6 +66,7 @@
                                                        <i class='fa fa-trash'></i>
                                                     </button> </a>
                                                 </td>
+                                            
                                         "; 
                                      }
 
