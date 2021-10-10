@@ -56,11 +56,13 @@ if (isset($_POST['apply'])) {
 
         if ($result) {
 
-            echo "<div class='alert alert-success container ' style='margin-top:12px'>Votre compte a été créé avec succès <a href='../doctorLogin.php'> Cliquer ici pour vous connecter</div></a>";
+            //header("Location:../doctorLogin.php");
+
+            echo "<div class='alert alert-success' style='padding:10px'>Votre compte a été créé avec succès <a href>Cliquer ici pour vous connecter</div></a>";
 
         } else {
 
-            echo "<div class='alert alert-danger container ' style='margin-top:12px'>Votre compte a été créé avec succès <a href='../../apply.php.php'> Cliquer ici pour vous connecter</div></a>";
+            header("Location:../apply.php");
 
         }
     }

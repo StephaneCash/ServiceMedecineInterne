@@ -60,7 +60,7 @@ if (isset($_POST['apply'])) {
 
         } else {
 
-            echo "<div class='alert alert-danger container ' style='margin-top:12px'>Votre compte a été créé avec succès <a href='../../apply.php.php'> Cliquer ici pour vous connecter</div></a>";
+            header("Location:../apply.php");
 
         }
     }
