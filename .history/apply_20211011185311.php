@@ -54,13 +54,13 @@ input[type="submit"] {
                             $msgError = $_SESSION['apply'];
                             $show = "<h5 class='alert alert-danger'>$msgError</h5>";
                         } else {
-                            $msgError = "";
+                            $show = "";
                         }
                     ?>
 
                     <?php 
                         if(isset($_SESSION['apply'])){
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px;'>$msgError</div>";
+                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px'>$msgError</div>";
                         }else{
                             echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px' hidden>$msgError</div>";
                         } ?>

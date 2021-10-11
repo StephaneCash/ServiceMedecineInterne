@@ -55,8 +55,9 @@ if (isset($_POST['apply'])) {
         $result = mysqli_query($connect, $query);
 
         if ($result) {
-            $_SESSION['apply'] = "";
+            
             echo "<div class='alert alert-success container ' style='margin-top:12px'>Votre compte a été créé avec succès <a href='../doctorLogin.php'> Cliquer ici pour vous connecter</div></a>";
+            $error['apply'] = "";
 
         } else {
 

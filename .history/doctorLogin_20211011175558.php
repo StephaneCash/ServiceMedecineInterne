@@ -1,62 +1,3 @@
-<?php
-
-session_start();
-
-include 'include/connexionDB.php';
-
-if (isset($_POST['login'])) {
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $error = array();
-
-    $query = "SELECT * FROM doctors WHERE username = '$username' AND password='$password' ";
-    $result = mysqli_query($connect, $query);
-
-    $row = mysqli_fetch_array($result);
-
-    if (empty($username)) {
-        $error['login'] = "Entrer votre username svp";
-    } else if (empty($password)) {
-        $error['login'] = "Entrer votre password svp";
-    } else if ($row['status'] == 'En attente') {
-        $error['login'] = "S'il vous plait veuillez patienter que l'Admin confirme votre compte";
-    } else if ($row['status'] == "Rejete") {
-        $error['login'] = "Essayer plus tard ";
-    }
-
-    if (count($error) == 0) {
-
-        $query = "SELECT * FROM doctors WHERE username = '$username' AND password='$password' ";
-        $res = mysqli_query($connect, $query);
-
-        if (mysqli_num_rows($res)) {
-
-            echo "<script>alert('Vous êtes connecté')</script>";
-            $_SESSION['doctor'] = $username;
-
-        } else {
-
-            echo "<script>alert('Compte inexistant')</script>";
-
-        }
-
-    }
-}
-
-if (isset($error['login'])) {
-
-    $msgErr = $error['login'];
-    $show = "<h5 class='alert alert-danger'>$msgErr</h5>";
-
-} else {
-
-    $show = "";
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -82,11 +23,11 @@ if (isset($error['login'])) {
     }
 </style>
 
-<body >
-
-    <?php
-include "include/header.php";
-?>
+<body > 
+    
+    <?php 
+        include("include/header.php");
+    ?>
 
     <div class="container loginDocteur">
         <div class="col-md-12" style="margin-top: 80px;">
@@ -95,10 +36,7 @@ include "include/header.php";
                 <div class="col-md-6 jumbotron">
                 <span class="glyphicon glyphicon-user" style="font-size:64px;"></span>
                     <h4>Connexion Docteurs</h4>
-                    <div>
-                        <?php echo $show; ?>
-                    </div>
-                    <form method="post" class="my-2">
+                    <form method="post" class="my-2" action="traitement/connectToDoctor.php">
                         <div class="form-group">
                             <label>Username</label>
                             <input type="text" name="username" class="form-control" placeholder="Entrer votre username">
@@ -110,7 +48,7 @@ include "include/header.php";
                         </div>
 
                         <input type="submit" name="login" class="btn btn-success" value="Se connecter">
-                        <p style="font-size:16px">
+                        <p style="font-size:16px"> 
                             Si vous n'avez pas de compte <a href="apply.php">Créer ici !!</a>
                         </p>
                     </form>

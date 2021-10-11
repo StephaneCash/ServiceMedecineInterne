@@ -60,7 +60,7 @@ input[type="submit"] {
 
                     <?php 
                         if(isset($_SESSION['apply'])){
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px;'>$msgError</div>";
+                            echo "<div class='text-center alert alert-danger' style='height:10px; font-size:14px; margin-top:-5px'>$msgError</div>";
                         }else{
                             echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px' hidden>$msgError</div>";
                         } ?>

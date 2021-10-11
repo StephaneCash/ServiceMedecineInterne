@@ -31,10 +31,6 @@ input[type="submit"] {
     margin-top: 20px;
     margin-bottom: 40px;
 }
-
-.alert-danger{
-    height:12px;
-}
 </style>
 
 <body>
@@ -52,18 +48,12 @@ input[type="submit"] {
                     <?php
                         if (isset($_SESSION['apply'])) {
                             $msgError = $_SESSION['apply'];
-                            $show = "<h5 class='alert alert-danger'>$msgError</h5>";
                         } else {
                             $msgError = "";
                         }
                     ?>
 
-                    <?php 
-                        if(isset($_SESSION['apply'])){
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px;'>$msgError</div>";
-                        }else{
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px' hidden>$msgError</div>";
-                        } ?>
+                    <?php echo "<div class='text-center alert alert-danger'>$msgError</div>"; ?>
 
                     <form method="post" action="traitement/createCountDoctors.php">
 
@@ -94,30 +84,26 @@ input[type="submit"] {
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Téléphone </label>
-                                    <input type="number" name="phone" class="form-control"
-                                        placeholder="Entrer votre Téléphone">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Créer un mot de passe </label>
-                                    <input type="password" name="password1" class="form-control"
-                                        placeholder="Entrer un mot de passe">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Confirmer votre mot de passe </label>
-                                    <input type="password" name="password2" class="form-control"
-                                        placeholder="Confirm password">
-                                </div>
-                            </div>
+                            <div class="col-md-6">n</div>
                         </div>
 
 
 
+                        <div class="form-group">
+                            <label>Téléphone </label>
+                            <input type="number" name="phone" class="form-control" placeholder="Entrer votre Téléphone">
+                        </div>
 
+                        <div class="form-group">
+                            <label>Créer un mot de passe </label>
+                            <input type="password" name="password1" class="form-control"
+                                placeholder="Entrer un mot de passe">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Confirmer votre mot de passe </label>
+                            <input type="password" name="password2" class="form-control" placeholder="Confirm password">
+                        </div>
 
                         <input type="submit" name="apply" value="Créer un compte" class="btn btn-success">
 

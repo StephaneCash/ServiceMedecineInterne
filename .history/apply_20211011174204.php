@@ -52,17 +52,14 @@ input[type="submit"] {
                     <?php
                         if (isset($_SESSION['apply'])) {
                             $msgError = $_SESSION['apply'];
-                            $show = "<h5 class='alert alert-danger'>$msgError</h5>";
-                        } else {
-                            $msgError = "";
                         }
                     ?>
 
                     <?php 
                         if(isset($_SESSION['apply'])){
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px;'>$msgError</div>";
+                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px'>$msgError</div>";
                         }else{
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px' hidden>$msgError</div>";
+                            echo "";
                         } ?>
 
                     <form method="post" action="traitement/createCountDoctors.php">

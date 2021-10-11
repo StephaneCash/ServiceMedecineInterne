@@ -20,9 +20,9 @@ if (isset($_POST['login'])) {
         $error['login'] = "Entrer votre username svp";
     } else if (empty($password)) {
         $error['login'] = "Entrer votre password svp";
-    } else if ($row['status'] == 'En attente') {
+    } else if ($row['Pending'] == 'En attente') {
         $error['login'] = "S'il vous plait veuillez patienter que l'Admin confirme votre compte";
-    } else if ($row['status'] == "Rejete") {
+    } else if ($row['pending'] == "Rejete") {
         $error['login'] = "Essayer plus tard ";
     }
 
@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
 
         } else {
 
-            echo "<script>alert('Compte inexistant')</script>";
+            echo "<script>alert('Compte non valide')</script>";
 
         }
 

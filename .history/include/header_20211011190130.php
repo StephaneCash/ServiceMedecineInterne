@@ -27,15 +27,9 @@
                         $user = $_SESSION['admin'];
                         echo "
                             <li class='nav-item'><a href='#' title='Admin' class='nav-link' ><i class='fa fa-user'></i> $user</a></li>
-                            <li class='nav-item'><a href='../admin/logout.php' title='Déconnexion' class='nav-link'> <i class='glyphicon glyphicon-log-out'></i> Se déconnecter</a></li>
+                            <li class='nav-item'><a href='../admin/logout.php' title='Docteur' class='nav-link'> <i class='glyphicon glyphicon-log-out'></i> Se déconnecter</a></li>
                         ";
-                    }else if(isset($_SESSION['doctor'])) {
-                        $user = $_SESSION['doctor'];
-                        echo "
-                            <li class='nav-item'><a href='#' title='Doctor' class='nav-link' ><i class='fa fa-user'></i> $user</a></li>
-                            <li class='nav-item'><a href='../admin/logout.php' title='Déconnexion' class='nav-link'> <i class='glyphicon glyphicon-log-out'></i> Se déconnecter</a></li>
-                        ";
-                    } else{
+                    }else{
                         echo "
                             <li class='nav-item'><a href='index.php' title='Accueil' class='nav-link' >Accueil</a></li>
                             <li class='nav-item'><a href='adminLogin.php' title='Admin' class='nav-link' >Admin</a></li>
