@@ -23,10 +23,10 @@ session_start();
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2" style="margin-top: 56px; margin-left: -30px">
                     <?php include('sideNav.php') ?>
                 </div>
-                <div class="col-md-10" style='margin-top:60px'>
+                <div class="col-md-10" style='margin-top:57px'>
                     <h3>Job Request</h3>
 
                     <div id="show"></div>

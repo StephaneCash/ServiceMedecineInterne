@@ -12,41 +12,53 @@
 
 <style>
 .ListeSide {
-    margin: -15px;
-    height: 100vh;
-    background-color: #222222;
-    position: fixed;
-    width: 160px;
-    text-align: center;
-    line-height: 40px;
+    background-color: #3a3a3a;
+    margin: 0px;
+    height: 92.7vh;
+}
+
+.ListeSide a {
+    background-color: #3a3a3a;
+    color: silver;
+    font-family: Segoe UI;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.ListeSide a:hover {
+    color: black;
+    background-color: silver;
+}
+
+.ListeSide .fa {
+    margin-left: 12px;
+}
+
+.active {
+    background-color: red;
 }
 </style>
 
 <body>
     <!-- SideNav -->
-    <div class="list-group bg-info ListeSide">
-        <div class="ab">
-            <a href="index.php" class="list-group-item list-group-item-action bg-info text-center nav-link"
-                style="background-color: #222222; color:silver; border-left-color: black; font-size:16px; font-family: Segoe UI">
-                <i class="fa fa-dashboard"></i> Dashboard
-            </a>
-            <a href="profile.php" class="list-group-item list-group-item-action bg-info text-center nav-link"
-                style="background-color: #222222; color:silver; border-left-color: black; font-size:16px; font-family: Segoe UI;">
-                <i class="fa fa-user" style="margin-left:-40px"></i> <span>Profile</span>
-            </a>
-            <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
-                style="background-color: #222222; color:silver; border-left-color: black; font-size:16px; font-family: Segoe UI">
-                <i class="fa fa-cog" style="margin-left:-8px"></i> Administra
-            </a>
-            <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
-                style="background-color: #222222; color:silver; border-left-color: black; font-size:16px; font-family: Segoe UI">
-                <i class="fa fa-user-md" style="margin-left:-20px"></i> Docteurs
-            </a>
-            <a href="" class="list-group-item list-group-item-action bg-info text-center nav-link"
-                style="background-color: #222222; color:silver; border-left-color: black; font-size:16px; font-family: Segoe UI">
-                <i class="fa fa-medkit" style="margin-left:-24px"></i> Patients
-            </a>
-        </div>
+    <div class="ListeSide">
+        <a href="index.php" class="list-group-item list-group-item-action nav-link">
+            <i class="fa fa-dashboard"></i> Dashboard
+        </a>
+
+        <a href="profile.php" class="list-group-item list-group-item-action nav-link">
+            <i class="fa fa-user"></i> <span>Profile</span>
+        </a>
+        <a href="" class="list-group-item list-group-item-action nav-link">
+            <i class="fa fa-cog"></i> Administrateurs
+        </a>
+        <a href="" class="list-group-item list-group-item-action nav-link">
+            <i class="fa fa-user-md"></i> Docteurs
+        </a>
+
+        <a href="" class="list-group-item list-group-item-action nav-link">
+            <i class="fa fa-medkit"></i> Patients
+        </a>
     </div>
 </body>
 

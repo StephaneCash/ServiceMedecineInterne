@@ -20,15 +20,15 @@ session_start();
     include('../include/connexionDB.php');
     ?>
 
-    <div class="container-fluid" style='margin-top:65px;'>
+    <div class="container-fluid" style='margin-top:56px;'>
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-1">
+                <div class="col-md-2" style="margin-left:-30px">
                     <?php include("sideNav.php") ?>
                     <!-- Ends -->
                 </div>
-                <div class="col-md-11" style="margin-left : 11%">
-                    <h2 style="font-family: 'Segoe UI'; margin-top: -4px"> <i class="fa fa-dashboard"></i> Dashboard
+                <div class="col-md-10">
+                    <h2 style="font-family: 'Segoe UI'; margin-top: 10px"> <i class="fa fa-dashboard"></i> Dashboard
                         Admin
                     </h2>
                     <div class="col-md-12">

@@ -1,14 +1,14 @@
 <?php
 include('../include/connexionDB.php');
 
-$query = "SELECT * FROM doctors WHERE status='En attente' ";
+$query = "SELECT * FROM doctors WHERE status='En attente' ORDER BY data_reg ASC ";
 
 $res = mysqli_query($connect, $query);
 
 $output = "";
 
 $output .= "
-        <table class='table table-bordered' style='margin-left:-40px;'>
+        <table class='table table-bordered'>
             <thead style='background-color:#3a3a3a; color:silver'>
                 <tr>
                     <th>#</th>
@@ -27,7 +27,7 @@ if (mysqli_num_rows($res) < 1) {
     $output .= "
             <tbody>
                 <tr>
-                    <td colspan=''>No Job request.</td>
+                    <td colSpan='8px'style='text-align:center' >No Job request.</td>
                 </td>
             </tbody>
         ";

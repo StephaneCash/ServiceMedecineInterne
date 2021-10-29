@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (isset($_SESSION['error'])) {
+    $erreurLogin = $_SESSION['error'];
+} else {
+    $erreurLogin = "";
+    session_destroy();
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +27,7 @@ session_start();
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-2" style="margin-top: 65px;">
+                <div class="col-md-2" style="margin-top: 56px; margin-left:-30px">
                     <?php
                     include "sideNav.php";
 
@@ -48,7 +54,7 @@ session_start();
 
                                 <form method="post" enctype="multipart/form-data" action="updateAdminProfile.php">
                                     <?php echo "<img src='img/$profiles' class='col-md-12'
-                                        style='height: 160px; width:180px; left:-3%; border-radius:170px'>";
+                                        style='height: 140px; width:140px; border-radius:140px'>";
                                     ?>
 
                                     <br><br>
@@ -81,16 +87,12 @@ session_start();
                                         value="Editer">
                                     <div id="contenu" style="padding: 10px; margin-top: 10px;">
                                         <?php
-                                        if (isset($_SESSION['error'])) {
-                                            $msgError = $_SESSION['error'];
-                                            echo "<i class='alert alert-danger'>$msgError</i>";
-                                        }
-                                        if (isset($_SESSION['success'])) {
-                                            $msgS = $_SESSION['success'];
-                                            echo "<i class='alert alert-success'>$msgS</i>";
-                                        }
+                                        if (!empty($erreurLogin)) { ?>
+                                        <div class="alert alert-danger">
+                                            <?php echo $erreurLogin ?>
+                                        </div>
+                                        <?php } ?>
 
-                                        ?>
                                     </div>
                                 </form>
                             </div>

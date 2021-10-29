@@ -20,14 +20,14 @@ session_start();
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-3" style="margin-top:65px">
+                <div class="col-md-2" style="margin-top:56px; margin-left: -30px;">
                     <?php
                     include("sideNav.php");
                     include("../include/connexionDB.php");
                     ?>
 
                 </div>
-                <div class="col-md-10" style="margin-top:0px">
+                <div class="col-md-10" style="margin-top:60px">
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-6">
@@ -40,7 +40,7 @@ session_start();
                                 $res = mysqli_query($connect, $requete);
 
                                 $output = "
-                                     <table class='table table-striped table-bordered' style='margin-left:28%;'>
+                                     <table class='table table-striped table-bordered'>
                                      
                                          <tr>
                                              <th style='width:10%'>#</th>
@@ -80,8 +80,7 @@ session_start();
 
                                 <h5 class="text-center" style="font-size:18px; font-family: Segoe UI;">Ajouter Admin
                                 </h5>
-                                <form method="post" action="insertAdmin.php" enctype="multipart/form-data"
-                                    style="margin-left:36%">
+                                <form method="post" action="insertAdmin.php" enctype="multipart/form-data">
                                     <div>
                                         <?php
                                         if (isset($_SESSION['error'])) {
