@@ -1,5 +1,5 @@
-<?php 
-    session_start();
+<?php
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 
-<body>
+<body style='background-color:#f0f0f0'>
     <?php include("../include/header.php") ?>
 
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-3" style="margin-top:65px">
-                    <?php 
-                        include("sideNav.php"); 
-                        include("../include/connexionDB.php");
+                    <?php
+                    include("sideNav.php");
+                    include("../include/connexionDB.php");
                     ?>
 
                 </div>
@@ -34,12 +34,12 @@
                                 <h5 class="text-center" style="font-size:18px; font-family: Segoe UI;">Tous les Admin
                                 </h5>
 
-                                <?php 
-                                    $ad = $_SESSION['admin'];
-                                    $requete = "SELECT * FROM admin WHERE username !='$ad'";
-                                    $res = mysqli_query($connect, $requete);
+                                <?php
+                                $ad = $_SESSION['admin'];
+                                $requete = "SELECT * FROM admin WHERE username !='$ad'";
+                                $res = mysqli_query($connect, $requete);
 
-                                     $output ="
+                                $output = "
                                      <table class='table table-striped table-bordered' style='margin-left:28%;'>
                                      
                                          <tr>
@@ -47,15 +47,15 @@
                                              <th >Username</th>
                                              <th style='width:10%'>Actions</th>
                                      ";
-                                     if(mysqli_num_rows($res) < 1){
-                                         $output .= "<tr><td colspan='3' style='text-align:center'> Pas d'admins !</td></tr>";
-                                     }
+                                if (mysqli_num_rows($res) < 1) {
+                                    $output .= "<tr><td colspan='3' style='text-align:center'> Pas d'admins !</td></tr>";
+                                }
 
-                                     while($row = mysqli_fetch_array($res)){
-                                        $id = $row['id'];
-                                        $username = $row['username'];
+                                while ($row = mysqli_fetch_array($res)) {
+                                    $id = $row['id'];
+                                    $username = $row['username'];
 
-                                        $output .= "
+                                    $output .= "
                                             <tr>
                                                 <td>$id</td>
                                                 <td>$username</td>
@@ -64,15 +64,15 @@
                                                        <i class='fa fa-trash'></i>
                                                     </button> </a>
                                                 </td>
-                                        "; 
-                                     }
+                                        ";
+                                }
 
-                                     $output .="
+                                $output .= "
                                         </tr>
                                     </table>
                                      ";
 
-                                     echo $output;
+                                echo $output;
                                 ?>
 
                             </div>
@@ -83,11 +83,11 @@
                                 <form method="post" action="insertAdmin.php" enctype="multipart/form-data"
                                     style="margin-left:36%">
                                     <div>
-                                        <?php 
-                                            if(isset($_SESSION['error'])){
-                                                $er = $_SESSION['error'];
-                                                echo "<h5 class='alert alert-danger'>$er</h5>";
-                                            }
+                                        <?php
+                                        if (isset($_SESSION['error'])) {
+                                            $er = $_SESSION['error'];
+                                            echo "<h5 class='alert alert-danger'>$er</h5>";
+                                        }
                                         ?>
                                     </div>
                                     <div class="form-group">

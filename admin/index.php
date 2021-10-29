@@ -1,5 +1,5 @@
-<?php 
-    session_start(); 
+<?php
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="background-color: silver">
+<body style="background-color: #f0f0f0">
     <?php
-        include "../include/header.php";
-        include ('../include/connexionDB.php');
+    include "../include/header.php";
+    include('../include/connexionDB.php');
     ?>
 
     <div class="container-fluid" style='margin-top:65px;'>
@@ -28,7 +28,8 @@
                     <!-- Ends -->
                 </div>
                 <div class="col-md-11" style="margin-left : 11%">
-                    <h2 style="font-family: 'Segoe UI'; margin-top: -4px"> <i class="fa fa-dashboard"></i> Dashboard Admin
+                    <h2 style="font-family: 'Segoe UI'; margin-top: -4px"> <i class="fa fa-dashboard"></i> Dashboard
+                        Admin
                     </h2>
                     <div class="col-md-12">
                         <div class="row">
@@ -37,10 +38,10 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-9">
-                                            <?php 
-                                                $requete = mysqli_query($connect, "SELECT * FROM admin");
+                                            <?php
+                                            $requete = mysqli_query($connect, "SELECT * FROM admin");
 
-                                                $nombreUsers = mysqli_num_rows($requete);
+                                            $nombreUsers = mysqli_num_rows($requete);
                                             ?>
                                             <h5 style="color:white; font-size:30px"> <?php echo $nombreUsers ?> </h5>
                                             <h5 style="color:white; font-size:18px">Total</h5>
@@ -48,7 +49,8 @@
                                         </div>
                                         <div class="col-md-3">
                                             <a href="admin.php">
-                                                <i class="fa fa-cog fa-spin fa-3x" style="margin-top:12px; color:white"></i> </a>
+                                                <i class="fa fa-cog fa-spin fa-3x"
+                                                    style="margin-top:12px; color:white"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -90,12 +92,23 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-9">
-                                            <h5 style="color:white; font-size:30px">0</h5>
+
+                                            <?php
+
+                                            $job = mysqli_query($connect, "SELECT * FROM doctors WHERE status='En attente'");
+
+                                            $num1 = mysqli_num_rows($job);
+
+                                            ?>
+
+                                            <h5 style="color:white; font-size:30px"><?php echo $num1 ?></h5>
                                             <h5 style="color:white; font-size:18px">Total</h5>
                                             <h5 style="color:white; font-size:18px">Job Request</h5>
                                         </div>
                                         <div class="col-md-3">
-                                            <i class="fa fa-book fa-3x" style="margin-top:12px; color:white"></i>
+                                            <a href="job_request.php">
+                                                <i class="fa fa-book fa-3x" style="margin-top:12px; color:white"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

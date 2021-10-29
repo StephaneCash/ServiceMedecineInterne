@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 
-<body > 
+<body>
 </body>
+
 </html>
 
 
@@ -57,14 +58,11 @@ if (isset($_POST['apply'])) {
         if ($result) {
             $_SESSION['apply'] = "";
             echo "<div class='alert alert-success container ' style='margin-top:12px'>Votre compte a été créé avec succès <a href='../doctorLogin.php'> Cliquer ici pour vous connecter</div></a>";
-
         } else {
 
             echo "<div class='alert alert-danger container ' style='margin-top:12px'>Echec de création de compte <a href='../../apply.php.php'> Cliquer ici pour vous connecter</div></a>";
-
         }
     }
-
 }
 
 if (isset($error['apply'])) {
