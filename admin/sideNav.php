@@ -12,17 +12,17 @@
 
 <style>
 .ListeSide {
-    background-color: #3a3a3a;
+    background-color: #282c34;
     margin: 0px;
     height: 92.7vh;
 }
 
 .ListeSide a {
-    background-color: #3a3a3a;
+    background-color: #282c34;
     color: silver;
     font-family: Segoe UI;
     font-size: 16px;
-    border: 1px solid black;
+    border: 1px solid #282c34;
 }
 
 .ListeSide a:hover {
@@ -32,6 +32,7 @@
 
 .ListeSide .fa {
     margin-left: 12px;
+    margin-right: 10px;
 }
 
 .active {

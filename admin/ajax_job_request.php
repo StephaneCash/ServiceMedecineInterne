@@ -9,7 +9,7 @@ $output = "";
 
 $output .= "
         <table class='table table-bordered'>
-            <thead style='background-color:#3a3a3a; color:silver'>
+            <thead style='background-color:silver; color:#282c34'>
                 <tr>
                     <th>#</th>
                     <th>Noms</th>
@@ -45,16 +45,9 @@ while ($row = mysqli_fetch_array($res)) {
                 <td>" . $row['phone'] . "</td>
                 <td>" . $row['data_reg'] . "</td>
                 <td>
-                    <div class='col-md-12'>
-                        <div class='row'>
-                            <div class='col-md-6'>
-                                <button id='" . $row['id'] . "' class='btn btn-success approve'>Approuver</button>
-                            </div>
-                            <div class='col-md-6'>
-                                <button id='" . $row['id'] . "' class='btn btn-danger reject'>Rejeter</button>
-                            </div>
-                        </div>
-                    </div>
+                    <button id='" . $row['id'] . "' class='btn btn-success approve'><i class='fa fa-check'></i> Approuver</button>
+                            
+                    <button id='" . $row['id'] . "' class='btn btn-danger reject'> <i class='fa fa-close'></i> Rejeter</button>        
                 </td>
             </tr>
         </tbody>

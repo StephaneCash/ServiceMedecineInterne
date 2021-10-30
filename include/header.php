@@ -24,7 +24,7 @@ a {
             <div class="navbar-header">
                 <a href="index.php" class="navbar-brand" title="Médecine Interne" style="margin-top:-5px">
                     <i class="glyphicon glyphicon-plus" style="font-size:19px; color:red; 
-                        width:30px; height:30px; border:2px solid silver; 
+                        width:30px; height:30px;  
                         border-radius:30px; text-align:center; line-height:26px"></i>
                     Service
                     Médecine Interne

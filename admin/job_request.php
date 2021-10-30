@@ -12,6 +12,12 @@ session_start();
     <title>JOB Request</title>
 </head>
 
+<style>
+body {
+    font-family: Segoe UI;
+}
+</style>
+
 <body style="background-color: #f0f0f0">
 
     <script src="../js/jquery.min.js"></script>
@@ -27,7 +33,7 @@ session_start();
                     <?php include('sideNav.php') ?>
                 </div>
                 <div class="col-md-10" style='margin-top:57px'>
-                    <h3>Job Request</h3>
+                    <h3>Demande d'emploi</h3>
 
                     <div id="show"></div>
                 </div>
@@ -51,6 +57,38 @@ $(document).ready(function() {
             }
         })
     }
+
+    $(document).on('click', '.approve', function() {
+
+        let id = $(this).attr("id");
+
+        $.ajax({
+            url: "ajax_approve.php",
+            method: "POST",
+            data: {
+                id: id
+            },
+            success: function(data) {
+                show();
+            }
+        })
+    })
+
+    $(document).on('click', '.reject', function() {
+
+        let id = $(this).attr("id");
+
+        $.ajax({
+            url: "ajax_reject.php",
+            method: "POST",
+            data: {
+                id: id
+            },
+            success: function(data) {
+                show();
+            }
+        })
+    })
 
 });
 </script>

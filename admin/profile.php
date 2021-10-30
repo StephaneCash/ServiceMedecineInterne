@@ -85,7 +85,7 @@ if (isset($_SESSION['error'])) {
                                     <br>
                                     <input type="submit" id="update" name="change" class="btn btn-success"
                                         value="Editer">
-                                    <div id="contenu" style="padding: 10px; margin-top: 10px;">
+                                    <div id="contenu" style="padding: 5px; margin-top: 10px; width:60%">
                                         <?php
                                         if (!empty($erreurLogin)) { ?>
                                         <div class="alert alert-danger">
