@@ -34,7 +34,7 @@ if (count($error) == 0) {
 
 $er = $error['u'];
 
-$_SESSION['error'] = $er;
+$_SESSION['erreur'] = $er;
 
 if (isset($error['u'])) {
     $er = $error['u'];

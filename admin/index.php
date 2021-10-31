@@ -61,12 +61,18 @@ session_start();
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-9">
-                                            <h5 style="color:white; font-size:30px">0</h5>
+                                            <?php
+                                            $doctor = mysqli_query($connect, "SELECT * FROM doctors WHERE status='Approved'");
+                                            $numbreDoctors = mysqli_num_rows($doctor);
+                                            ?>
+                                            <h5 style="color:white; font-size:30px"><?php echo $numbreDoctors ?></h5>
                                             <h5 style="color:white; font-size:18px">Total</h5>
                                             <h5 style="color:white; font-size:18px">Docteurs</h5>
                                         </div>
                                         <div class="col-md-3">
-                                            <i class="fa fa-user-md fa-3x" style="margin-top:12px; color:white"></i>
+                                            <a href="doctor.php">
+                                                <i class="fa fa-user-md fa-3x" style="margin-top:12px; color:white"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

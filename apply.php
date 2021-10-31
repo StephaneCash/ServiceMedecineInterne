@@ -16,30 +16,27 @@ session_start();
 
 <style>
 label {
-    font-size: 15px;
-    font-family: Segoe UI;
+    font-size: 14px;
+    font-family: Segoe UI !important;
 }
 
-.IconeUser {
-    font-size: 75px;
-}
 
 input[type="submit"] {
     padding: 10px;
     font-family: Arial;
-    width: 100%;
-    margin-top: 20px;
+    width: 90%;
+    margin-left: 35px;
     margin-bottom: 40px;
 }
 
-.alert-danger{
-    height:12px;
+.alert-danger {
+    height: 12px;
 }
 </style>
 
 <body>
 
-    <?php include "include/header.php";?>
+    <?php include "include/header.php"; ?>
 
     <div class="container-fluid">
         <div class="col-md-12">
@@ -50,20 +47,20 @@ input[type="submit"] {
                     <h2 style="text-align:center">Créer un compte</h2>
 
                     <?php
-                        if (isset($_SESSION['apply'])) {
-                            $msgError = $_SESSION['apply'];
-                            $show = "<h5 class='alert alert-danger'>$msgError</h5>";
-                        } else {
-                            $msgError = "";
-                        }
+                    if (isset($_SESSION['apply'])) {
+                        $msgError = $_SESSION['apply'];
+                        $show = "<h5 class='alert alert-danger'>$msgError</h5>";
+                    } else {
+                        $msgError = "";
+                    }
                     ?>
 
-                    <?php 
-                        if(isset($_SESSION['apply'])){
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px;'>$msgError</div>";
-                        }else{
-                            echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px' hidden>$msgError</div>";
-                        } ?>
+                    <?php
+                    if (isset($_SESSION['apply'])) {
+                        echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px;'>$msgError</div>";
+                    } else {
+                        echo "<div class='text-center alert alert-danger' style='height:auto; font-size:14px' hidden>$msgError</div>";
+                    } ?>
 
                     <form method="post" action="traitement/createCountDoctors.php">
 

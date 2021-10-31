@@ -83,8 +83,8 @@ session_start();
                                 <form method="post" action="insertAdmin.php" enctype="multipart/form-data">
                                     <div>
                                         <?php
-                                        if (isset($_SESSION['error'])) {
-                                            $er = $_SESSION['error'];
+                                        if (isset($_SESSION['erreur'])) {
+                                            $er = $_SESSION['erreur'];
                                             echo "<h5 class='alert alert-danger'>$er</h5>";
                                         }
                                         ?>

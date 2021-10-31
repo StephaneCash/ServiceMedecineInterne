@@ -4,7 +4,6 @@ if (isset($_SESSION['error'])) {
     $erreurLogin = $_SESSION['error'];
 } else {
     $erreurLogin = "";
-    session_destroy();
 }
 ?>
 
