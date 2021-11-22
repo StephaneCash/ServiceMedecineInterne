@@ -21,11 +21,10 @@ if (isset($_SESSION['error'])) {
 
 <style>
     img{
-        height:150px !important;
-        width: 30% !important;
+        height:200px !important;
+        width: 40% !important;
         border-radius: 100%;
-        margin-left: -20px;
-        border: 3px solid black;
+        margin-left: -40px;
     }
 </style>
 

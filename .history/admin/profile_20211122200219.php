@@ -19,16 +19,6 @@ if (isset($_SESSION['error'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<style>
-    img{
-        height:150px !important;
-        width: 30% !important;
-        border-radius: 100%;
-        margin-left: -20px;
-        border: 3px solid black;
-    }
-</style>
-
 <body style="background-color: #f0f0f0">
     <?php
     include "../include/header.php";
@@ -79,7 +69,8 @@ if (isset($_SESSION['error'])) {
 
                                     <div class="form-group">
                                         <label>Editer le username</label>
-                                        <input type="text" class="form-control" name="username" style='width:60%' value="<?php echo $username ?>">
+                                        <input type="text" class="form-control" name="username" style='width:60%'
+                                            value="<?php echo $username ?>">
                                     </div>
                                     <div class="form-group">
                                         <label>Entrer l'ancien mot de passe : </label>
@@ -90,13 +81,14 @@ if (isset($_SESSION['error'])) {
                                     <label>Confirmer le nouveau mot de passe</label>
                                     <input type='password' class="form-control" name="password2" style='width:60%'>
                                     <br>
-                                    <input type="submit" id="update" name="change" class="btn btn-success" value="Editer">
+                                    <input type="submit" id="update" name="change" class="btn btn-success"
+                                        value="Editer">
                                     <div id="contenu" style="padding: 5px; margin-top: 10px; width:60%">
                                         <?php
                                         if (!empty($erreurLogin)) { ?>
-                                            <div class="alert alert-danger">
-                                                <?php echo $erreurLogin ?>
-                                            </div>
+                                        <div class="alert alert-danger">
+                                            <?php echo $erreurLogin ?>
+                                        </div>
                                         <?php } ?>
 
                                     </div>
@@ -110,17 +102,17 @@ if (isset($_SESSION['error'])) {
     </div>
 
     <script>
-        document.getElementById("update").addEventListener("click", function() {
+    document.getElementById("update").addEventListener("click", function() {
 
-            let cont = document.getElementById('contenu');
+        let cont = document.getElementById('contenu');
 
-            setTimeout(() => {
+        setTimeout(() => {
 
-                if (getComputedStyle(cont).display == "block") {
-                    cont.style.display = "none";
-                }
-            }, 3000);
-        })
+            if (getComputedStyle(cont).display == "block") {
+                cont.style.display = "none";
+            }
+        }, 3000);
+    })
     </script>
 
 </body>

@@ -7,8 +7,5 @@
         header("Location:../index.php");
     }
 
-    if(isset($_SESSION['doctor'])){
-    unset($_SESSION['admin']);
-
-    header("Location:../index.php");
-    }
+    if(isset($_SESSION['do']))
+?>

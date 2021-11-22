@@ -43,7 +43,7 @@ a {
                     $user = $_SESSION['doctor'];
                     echo "
                             <li class='nav-item'><a href='#' title='Doctor' class='nav-link' ><i class='fa fa-user'></i> $user</a></li>
-                            <li class='nav-item'><a href='../doctor/logoutDoct.php' title='Déconnexion' class='nav-link'> <i class='glyphicon glyphicon-log-out'></i> Se déconnecter</a></li>
+                            <li class='nav-item'><a href='decDoct.php' title='Déconnexion' class='nav-link'> <i class='glyphicon glyphicon-log-out'></i> Se déconnecter</a></li>
                         ";
                 } else {
                     echo "

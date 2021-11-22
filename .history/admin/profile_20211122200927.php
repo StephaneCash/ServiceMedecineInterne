@@ -24,7 +24,7 @@ if (isset($_SESSION['error'])) {
         height:150px !important;
         width: 30% !important;
         border-radius: 100%;
-        margin-left: -20px;
+        margin-left: -40px;
         border: 3px solid black;
     }
 </style>
