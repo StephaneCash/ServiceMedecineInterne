@@ -11,8 +11,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/font-awesome.css">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
     <title>Accueil | Doctor</title>
 </head>
 
@@ -44,7 +42,7 @@ session_start();
                             </div>
                         </div>
                         <div style="padding:0; margin-top:60px">
-                            <table class="table table-bordered table-striped" style="box-shadow: 2px 2px 18px silver;">
+                            <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -55,20 +53,38 @@ session_start();
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                    </tr>
-                                </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-    <script src="../js/app.js"></script>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exempleModal">Launch</button>
+
+    <div class="modal fade" id="exempleModal" tabindex="-1" role="dialog" aria-labelledby="exempleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Entête
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+    <script></script>
 </body>
 
 </html>

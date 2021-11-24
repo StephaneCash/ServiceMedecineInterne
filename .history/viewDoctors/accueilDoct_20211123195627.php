@@ -11,8 +11,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/font-awesome.css">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
     <title>Accueil | Doctor</title>
 </head>
 
@@ -41,10 +41,11 @@ session_start();
                             </div>
                             <div class="col-md-6">
                                 <button class="btn btn-primary"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ad">Launch</button>
                             </div>
                         </div>
                         <div style="padding:0; margin-top:60px">
-                            <table class="table table-bordered table-striped" style="box-shadow: 2px 2px 18px silver;">
+                            <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -56,10 +57,28 @@ session_start();
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    </tr>
+
                                 </tbody>
                             </table>
+                        </div>
+
+                        <div class="modal fade" id="ad" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title" id="myModallabel">Ajouter une fac</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Body
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" name="save"><span class="glyphicon glyphicon-save"></span>
+                                            Save</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

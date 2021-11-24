@@ -1,0 +1,3 @@
+$(document).read(() => {
+    alert('Allo')
+})

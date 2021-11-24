@@ -41,6 +41,7 @@ session_start();
                             </div>
                             <div class="col-md-6">
                                 <button class="btn btn-primary"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exempleModal">Launch</button>
                             </div>
                         </div>
                         <div style="padding:0; margin-top:60px">
@@ -57,6 +58,7 @@ session_start();
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>1</td>
                                     </tr>
                                 </tbody>
                             </table>
