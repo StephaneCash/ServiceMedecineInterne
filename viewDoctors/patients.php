@@ -23,7 +23,38 @@
                         <?php include('menuLeft.php') ?>
                     </div>
                     <div class="col-md-10" style="margin-top: 100px;">
-                        Patients
+                        <div class="col-md-8" style="padding:0px">
+                            <div class="col-md-6" style="padding:0px">
+                                <input type="search" class="form-control" placeholder="Rechercher" />
+                                <button class="btn btn-default" style="margin-top:10px; margin-bottom:10px">
+                                    <i class="fa fa-search"> </i> Rechercher</button>
+                            </div>
+                            <div class="col-md-6">
+                                <a href='newPatient.php'>
+                                    <button class="btn btn-default"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="padding:0; margin-top:100px">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Liste de patients <i class="fa fa-user-md fa-2x"></i></div>
+                                <div class="panel-body">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Noms</th>
+                                                <th>Sexe</th>
+                                                <th>Poids</th>
+                                                <th>Maladie et Docteurs</th>
+                                                <th>Photo</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

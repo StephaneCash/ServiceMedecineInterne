@@ -14,9 +14,8 @@ session_start();
 </head>
 
 <style>
-    a:hover{
+    a:hover {
         background-color: white !important;
-        color:red !important;
     }
 </style>
 
@@ -35,7 +34,7 @@ session_start();
                     </div>
                     <div class="col-md-10" style="margin-top: 100px;">
                         <div class="container">
-                            <form action="../traitement/addPatient.php" enctype="multipart/form-data">
+                            <form action="../traitement/addPatient.php" method="post" enctype="multipart/form-data">
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="panel panel-default">
@@ -68,12 +67,6 @@ session_start();
                                                         <input type="text" class="form-control" placeholder="Le poids" name="poids">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Chosir un service</label>
-                                                        <select class="form-control" name="maladie">
-                                                            <option value=""></option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label>Chosir une photo</label>
                                                         <input type="file" class="form-control" placeholder="Le postnom" name="photo">
                                                     </div>
@@ -82,11 +75,16 @@ session_start();
                                                         <label>Entrer le numéro du téléphone</label>
                                                         <input type="number" class="form-control" placeholder="Le numéro de téléphone" name="phone">
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label>Entrer une adresse</label>
+                                                        <textarea name="description" placeholder="Description" class="form-control"></textarea>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <a style="float:left; color:black !important" href="accueilDoct.php">Retour sur la page de patients </a>
-                                                    <button class="btn btn-default" style="float:right"> <i class="fa fa-plus"></i> Ajouter</button>
-                                                </div>
+                                            </div>
+
+                                            <div class="row" style="padding:45px">
+                                                <a style="float:left; color:black !important" href="accueilDoct.php">Retour sur la page de patients </a>
+                                                <button class="btn btn-default" style="float:right" name="ajouter_patient"> <i class="fa fa-plus"></i> Ajouter</button>
                                             </div>
                                         </div>
                                     </div>

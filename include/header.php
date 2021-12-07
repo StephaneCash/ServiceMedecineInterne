@@ -15,11 +15,6 @@ a {
     color: silver !important;
 }
 
-a:hover{
-    background-color: #1a202c !important;
-    color: blue
-}
-
 </style>
 
 <body>
