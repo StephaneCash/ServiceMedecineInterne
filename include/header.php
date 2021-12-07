@@ -12,14 +12,21 @@
 <style>
 a {
     font-family: Segoe UI;
+    color: silver !important;
 }
+
+a:hover{
+    background-color: #1a202c !important;
+    color: blue
+}
+
 </style>
 
 <body>
 
     <script src="../js/jquery.min.js"> </script>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar navbar-fixed-top" style="background:#1a202c;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="index.php" class="navbar-brand" title="Médecine Interne" style="margin-top:-5px">

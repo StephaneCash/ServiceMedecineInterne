@@ -19,7 +19,7 @@ session_start();
 <style>
 </style>
 
-<body style="background-color: #f0f0f0">
+<body>
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12">
@@ -33,33 +33,37 @@ session_start();
                         <?php include('menuLeft.php') ?>
                     </div>
                     <div class="col-md-10" style="margin-top: 70px;">
-                        <div class="col-md-8">
-                            <div class="col-md-6">
+                        <div class="col-md-8" style="padding:0px">
+                            <div class="col-md-6" style="padding:0px">
                                 <input type="search" class="form-control" placeholder="Rechercher" />
-                                <button class="btn btn-success" style="margin-top:10px; margin-bottom:10px">
+                                <button class="btn btn-default" style="margin-top:10px; margin-bottom:10px">
                                     <i class="fa fa-search"> </i> Rechercher</button>
                             </div>
                             <div class="col-md-6">
-                                <button class="btn btn-primary"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                <a href='newPatient.php'>
+                                    <button class="btn btn-default"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                </a>
                             </div>
                         </div>
-                        <div style="padding:0; margin-top:60px">
-                            <table class="table table-bordered table-striped" style="box-shadow: 2px 2px 18px silver;">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Noms</th>
-                                        <th>Age</th>
-                                        <th>Poids</th>
-                                        <th>Sexe</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div style="padding:0; margin-top:100px">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Liste de patients <i class="fa fa-user-md fa-2x"></i></div>
+                                <div class="panel-body">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Noms</th>
+                                                <th>Sexe</th>
+                                                <th>Poids</th>
+                                                <th>Maladie et Docteurs</th>
+                                                <th>Photo</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -68,7 +72,6 @@ session_start();
 
         </div>
     </div>
-    <script src="../js/app.js"></script>
 </body>
 
 </html>

@@ -12,13 +12,13 @@
 
 <style>
     .ListeSide {
-        background-color: #282c34;
+        background-color: #1a202c;
         margin: 0px;
         height: 93vh;
     }
 
     .ListeSide a {
-        background-color: #282c34;
+        background-color: #1a202c;
         color: silver;
         font-family: Segoe UI;
         font-size: 16px;
@@ -43,6 +43,10 @@
 <body>
     <!-- SideNav -->
     <div class="ListeSide">
+
+        <a href="accueilDoct.php" class="list-group-item list-group-item-action nav-link">
+            <i class="fa fa-home"></i>Accueil
+        </a>
         <a href="patients.php" class="list-group-item list-group-item-action nav-link">
             <i class="fa fa-folder"></i>Patients
         </a>
