@@ -69,6 +69,12 @@
                     <i class="fa fa-folder"></i>Sevices
                 </a>
             </li>
+            <li class="<?php if ($page == 'doctors.php') : echo "active";
+                        endif ?>">
+                <a href="doctors.php" class="list-group-item list-group-item-action nav-link">
+                    <i class="fa fa-user-md"></i>Docteurs
+                </a>
+            </li>
             <li class="<?php if ($page == 'consultations.php') : echo "active";
                         endif ?>">
                 <a href="consultations.php" class="list-group-item list-group-item-action nav-link">
