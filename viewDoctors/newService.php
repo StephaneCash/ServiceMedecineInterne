@@ -42,11 +42,11 @@ session_start();
                                             <div class="panel-body">
                                                 <div class="form-group">
                                                     <label>Entrer le nom</label>
-                                                    <input type="text" class="form-control" placeholder="Le nom" name="nom">
+                                                    <input type="text" required class="form-control" placeholder="Le nom" name="nom">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Entrer la description</label>
-                                                    <textarea class="form-control" placeholder="Une description" name="description"></textarea>
+                                                    <textarea class="form-control" required placeholder="Une description" name="description"></textarea>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <a style="float:left; color:black !important" href="services.php">Retour sur la page de patients </a>

@@ -63,7 +63,7 @@ $num = mysqli_num_rows($result);
                         </div>
                         <div style="padding:0; margin-top:100px">
                             <div class="panel panel-default" style="height: 70vh; overflow: auto;">
-                                <div class="panel-heading">Liste de patients
+                                <div class="panel-heading">Liste de services
                                     (<?php echo $num ?>)
                                 </div>
                                 <div class="panel-body">
