@@ -94,7 +94,7 @@ session_start();
 
                                             <div class="row" style="padding:10px 45px">
                                                 <a style="float:left; color:black !important" href="patients.php">Retour sur la page de patients </a>
-                                                <button class="btn btn-default" style="float:right" name="ajouter_patient"> <i class="fa fa-plus"></i> Ajouter un nouveau patient</button>
+                                                <button class="btn btn-default" style="float:right;background:#f0f0f0" name="ajouter_patient"> <i class="fa fa-plus"></i> Ajouter un nouveau patient</button>
                                             </div>
                                         </div>
                                     </div>

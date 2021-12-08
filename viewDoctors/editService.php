@@ -69,7 +69,7 @@ $description = $service['description'];
                                                 </div>
                                                 <div class="col-md-12">
                                                     <a style="float:left; color:black !important" href="services.php">Retour sur la page de patients </a>
-                                                    <button class="btn btn-default" style="float:right" name="editer_service"> <i class="fa fa-edit"></i> Editer</button>
+                                                    <button class="btn btn-default" style="float:right;background:#f0f0f0" name="editer_service"> <i class="fa fa-edit"></i> Editer</button>
                                                 </div>
                                             </div>
                                         </div>

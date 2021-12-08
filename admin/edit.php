@@ -33,7 +33,7 @@ session_start();
                     if (isset($_GET['id'])) {
                         $id = $_GET['id'];
 
-                        $query = "SELECT * FROM doctors WHERE id='$id'";
+                        $query = "SELECT * FROM doctors WHERE id_doctor='$id'";
                         $res = mysqli_query($connect, $query);
 
                         $doct = mysqli_fetch_array($res);
@@ -56,7 +56,7 @@ session_start();
                             <h4>Détails du docteur</h4>
                             </p>
                             <div style="border:1px solid silver; padding:10px; border-radius:4px; width:70%">
-                                <h5>ID : <?php echo $doct['id']; ?></h5>
+                                <h5>ID : <?php echo $doct['id_doctor']; ?></h5>
                                 <h5>Noms : <?php echo $doct['noms']; ?></h5>
                                 <h5>Username : <?php echo $doct['username']; ?></h5>
                                 <h5>Genre : <?php echo $doct['genre']; ?></h5>

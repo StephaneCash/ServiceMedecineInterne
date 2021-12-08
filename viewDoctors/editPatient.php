@@ -13,7 +13,7 @@ $result = mysqli_query($connect, $req);
 $patient = mysqli_fetch_array($result);
 
 $id_patient = $patient['id_patient'];
-$nom = $patient['nom'];
+$nom = $patient['nom_patient'];
 $postnom = $patient['postnom'];
 $prenom = $patient['prenom'];
 $sexe = $patient['sexe'];
@@ -114,7 +114,7 @@ $description = $patient['description'];
 
                                             <div class="row" style="padding:10px 45px">
                                                 <a style="float:left; color:black !important" href="patients.php">Retour sur la page de patients </a>
-                                                <button class="btn btn-default" style="float:right" name="editer_patient"> <i class="fa fa-edit"></i> Editer <?php echo $nom ?></button>
+                                                <button class="btn btn-default" style="float:right;background:#f0f0f0" name="editer_patient"> <i class="fa fa-edit"></i> Editer <?php echo $nom ?></button>
                                             </div>
                                         </div>
                                     </div>

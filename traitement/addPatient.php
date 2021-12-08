@@ -20,7 +20,7 @@ if (isset($_POST['ajouter_patient'])) {
     $Img_temp = $_FILES['photo']['tmp_name'];
     move_uploaded_file($Img_temp, "../images/" . $photo);
 
-    $req = "INSERT INTO patient (nom, postnom, prenom, sexe, poids, photo, telephone, date, description)
+    $req = "INSERT INTO patient (nom_patient, postnom, prenom, sexe, poids, photo, telephone, date, description)
         VALUES('$nom', '$postnom', '$prenom', '$sexe', '$poids', '$photo', '$phone', '$date', '$description')";
     $result = mysqli_query($connect, $req);
 

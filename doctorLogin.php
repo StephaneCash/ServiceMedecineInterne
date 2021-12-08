@@ -33,7 +33,7 @@ if (isset($_POST['login'])) {
 
         if (mysqli_num_rows($res)) {
             $_SESSION['doctor'] = $username;
-            header("Location:viewDoctors/accueilDoct.php");
+            header("Location:viewDoctors/patients.php");
 
         } else {
 

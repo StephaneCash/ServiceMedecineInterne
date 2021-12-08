@@ -57,7 +57,7 @@ $num = mysqli_num_rows($result);
                             </div>
                             <div class="col-md-6">
                                 <a href='newService.php'>
-                                    <button class="btn btn-default"> <i class="fa fa-plus"> </i> Nouveau service</button>
+                                    <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-plus"> </i> Nouveau service</button>
                                 </a>
                             </div>
                         </div>

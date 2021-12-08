@@ -60,7 +60,7 @@ $num = mysqli_num_rows($result);
                             </div>
                             <div class="col-md-6">
                                 <a href='newPatient.php'>
-                                    <button class="btn btn-default"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                    <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-plus"> </i> Nouveau patient</button>
                                 </a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ $num = mysqli_num_rows($result);
                                             while ($patient = mysqli_fetch_array($result)) { ?>
                                                 <tr>
                                                     <td><?php echo $patient['id_patient'] ?></td>
-                                                    <td><?php echo $patient['nom'] . '  ' . $patient['postnom'] . ' ' . $patient['prenom'] ?></td>
+                                                    <td><?php echo $patient['nom_patient'] . '  ' . $patient['postnom'] . ' ' . $patient['prenom'] ?></td>
                                                     <td><?php echo $patient['sexe'] ?></td>
                                                     <td><?php echo $patient['poids'] ?> kg</td>
                                                     <td> <img style="width:50px; height: 50px; border-radius: 100%;" src="../images/<?php echo $patient['photo'] ?>" </td>

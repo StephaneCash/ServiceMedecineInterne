@@ -66,7 +66,7 @@ session_start();
                     $output .= "
         <tbody style='border:1px solid black'>
             <tr>
-                <td>" . $row['id'] . "</td>
+                <td>" . $row['id_doctor'] . "</td>
                 <td>" . $row['noms'] . "</td>
                 <td>" . $row['username'] . "</td>
                 <td>" . $row['email'] . "</td>
@@ -75,7 +75,7 @@ session_start();
                 <td>" . $row['salaire'] . "</td>
                 <td>" . $row['data_reg'] . "</td>
                 <td>
-                    <a href='edit.php?id=" . $row['id'] . "'>
+                    <a href='edit.php?id=" . $row['id_doctor'] . "'>
                         <button class='btn btn-info'><i class='fa fa-eye'></i> Voir le détail</button>
                     </a>       
                 </td>

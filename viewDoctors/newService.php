@@ -50,7 +50,7 @@ session_start();
                                                 </div>
                                                 <div class="col-md-12">
                                                     <a style="float:left; color:black !important" href="services.php">Retour sur la page de patients </a>
-                                                    <button class="btn btn-default" style="float:right" name="ajouter_service"> <i class="fa fa-plus"></i> Ajouter</button>
+                                                    <button class="btn btn-default" style="float:right;background:#f0f0f0" name="ajouter_service"> <i class="fa fa-plus"></i> Ajouter</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -24,6 +24,12 @@ session_start();
                     <?php
                     include("sideNav.php");
                     include("../include/connexionDB.php");
+
+                    if (isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                        $req = "DELETE FROM admin WHERE id='$id";
+                        $res = mysqli_query($connect, $req);
+                    }
                     ?>
 
                 </div>
@@ -60,7 +66,7 @@ session_start();
                                                 <td>$id</td>
                                                 <td>$username</td>
                                                 <td>
-                                                    <a href='admin.php?id=$id'><button id='$id' class='btn btn-danger remove'>
+                                                    <a href='deleteAdmin.php?id=$id'><button id='$id' class='btn btn-danger remove'>
                                                        <i class='fa fa-trash'></i>
                                                     </button> </a>
                                                 </td>
