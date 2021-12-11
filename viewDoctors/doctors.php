@@ -56,7 +56,7 @@ $num = mysqli_num_rows($result);
                                 </form>
                             </div>
                             <div class="col-md-6">
-                                <a href='newService.php'>
+                                <a href='nouveauDoct.php'>
                                     <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-plus"> </i> Nouveau docteur</button>
                                 </a>
                             </div>
