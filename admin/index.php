@@ -62,7 +62,7 @@ session_start();
                                     <div class="row">
                                         <div class="col-md-9">
                                             <?php
-                                            $doctor = mysqli_query($connect, "SELECT * FROM doctors WHERE status='Approved'");
+                                            $doctor = mysqli_query($connect, "SELECT * FROM doctors WHERE statut='Approved'");
                                             $numbreDoctors = mysqli_num_rows($doctor);
                                             ?>
                                             <h5 style="color:white; font-size:30px"><?php echo $numbreDoctors ?></h5>
@@ -101,7 +101,7 @@ session_start();
 
                                             <?php
 
-                                            $job = mysqli_query($connect, "SELECT * FROM doctors WHERE status='En attente'");
+                                            $job = mysqli_query($connect, "SELECT * FROM doctors WHERE statut='En attente'");
 
                                             $num1 = mysqli_num_rows($job);
 

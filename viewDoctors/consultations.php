@@ -28,8 +28,6 @@ $result = mysqli_query($connect, $req);
         font-size: 14px;
         font-family: Segoe UI;
     }
-
-    .detailConsultation {}
 </style>
 
 <body>
@@ -130,7 +128,7 @@ $result = mysqli_query($connect, $req);
                                                 $poids = $val['poids'];
                                                 $sexe = $val['sexe'];
                                                 $telephone = $val['telephone'];
-                                                $adresse = $val['description'];
+                                                $adresse = $val['description_patient'];
                                                 $name = $nomsP;
 
                                                 $nomD = $val['noms'];
@@ -154,8 +152,8 @@ $result = mysqli_query($connect, $req);
                                                     <td>Noms : $nomsP $postnom $prenom</td><br />
                                                     <td > Poids : $poids kg</td><br />
                                                     <td> Sexe : $sexe </td><br />
-                                                    <td> Téléphone : $telephone kg</td><br />
-                                                    <td> Poids : $adresse kg</td>
+                                                    <td> Téléphone : +243 $telephone </td><br />
+                                                    <td> Adresse : $adresse </td>
                                                 </div>
                                             </div>
                                             ";

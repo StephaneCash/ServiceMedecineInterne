@@ -7,10 +7,11 @@ if (isset($_GET['valueInput'])) {
 
     $dataInput = isset($_GET['valueInput']) ? $_GET['valueInput'] : "";
 
-    $req = "SELECT * FROM doctors as d, specialite as s WHERE d.id_specialite = s.id_specialite AND noms like '%$dataInput%' ";
+    $req = "SELECT * FROM doctors as d, specialite as s WHERE d.id_specialite = s.id_specialite AND noms like '%$dataInput%'
+         AND statut='Approved' ";
     $result = mysqli_query($connect, $req);
 } else {
-    $req = "SELECT * FROM doctors as d, specialite as s WHERE d.id_specialite = s.id_specialite";
+    $req = "SELECT * FROM doctors as d, specialite as s WHERE d.id_specialite = s.id_specialite AND statut='Approved'";
     $result = mysqli_query($connect, $req);
 }
 
@@ -57,7 +58,7 @@ $num = mysqli_num_rows($result);
                             </div>
                             <div class="col-md-6">
                                 <a href='nouveauDoct.php'>
-                                    <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-plus"> </i> Nouveau docteur</button>
+                                    <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-plus"> </i> Nouveau spécialiste</button>
                                 </a>
                             </div>
                         </div>
@@ -87,10 +88,10 @@ $num = mysqli_num_rows($result);
                                                         <td><?php echo $service['nom_specialite'] ?></td>
                                                         <td><?php echo $service['email'] . ' , ' . $service['phone'] ?></td>
                                                         <th><img style="width:50px; height: 50px; border-radius: 100%;" src="../admin/img/<?php echo $service['profile'] ?>" </th>
-                                                        <td style="width:220px; text-align:center">
-                                                            <a onclick="return confirm(' Etes-vous sûr de vouloir supprimer ce service ?')" href='../traitement/deleteService.php?id=<?php echo $service['id_specialite'] ?>'>
+                                                        <td style="width:250px; text-align:center">
+                                                            <a onclick="return confirm(' Etes-vous sûr de vouloir enlever ce spécialiste de la liste ?')" href='../traitement/RemoveListe.php?id=<?php echo $service['id_specialite'] ?>'>
                                                                 <button class="btn btn-default"><i class="fa fa-trash "></i>
-                                                                    Supprimer
+                                                                    Enlever de la liste
                                                                 </button>
                                                             </a>
                                                             <a href='editService.php?id=<?php echo $service['id_specialite'] ?>'>

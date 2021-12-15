@@ -4,16 +4,20 @@ session_start();
 include('../include/connexionDB.php');
 include('../include/functions.php');
 
-if (isset($_POST['ajouter_doctor'])) {
- 
-    $specialite = $_POST['specialite'];
-    $doctor = $_POST['doctor'];
+if (isset($_GET['id'])) {
 
-    $req = "UPDATE doctors set id_specialite = '$specialite' WHERE id_doctor='$doctor'";
+    $id = $_GET['id'];
+
+    echo $id_doctors;
+
+    $status = 'remove';
+
+    $req = "UPDATE doctors set statut = '$status' WHERE id_doctor='$id'";
+
     $result = mysqli_query($connect, $req);
 
     if ($result) {
-        flash('msg', 'Spécialiste ajouté avec succès');
+        flash('msg', 'Spécialiste enlevé avec succès');
         header('Location:../viewDoctors/doctors.php');
     } else {
         echo "Echec";

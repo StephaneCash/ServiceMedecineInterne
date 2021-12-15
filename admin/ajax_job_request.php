@@ -1,7 +1,7 @@
 <?php
 include('../include/connexionDB.php');
 
-$query = "SELECT * FROM doctors WHERE status='En attente' ORDER BY data_reg ASC ";
+$query = "SELECT * FROM doctors WHERE statut='En attente' ORDER BY data_reg ASC ";
 
 $res = mysqli_query($connect, $query);
 
@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_array($res)) {
     $output .= "
         <tbody style='border:1px solid black'>
             <tr>
-                <td>" . $row[' id_doctor'] . "</td>
+                <td>" . $row['id_doctor'] . "</td>
                 <td>" . $row['noms'] . "</td>
                 <td>" . $row['username'] . "</td>
                 <td>" . $row['email'] . "</td>
@@ -45,9 +45,9 @@ while ($row = mysqli_fetch_array($res)) {
                 <td>" . $row['phone'] . "</td>
                 <td>" . $row['data_reg'] . "</td>
                 <td>
-                    <button id='" . $row[' id_doctor'] . "' class='btn btn-success approve'><i class='fa fa-check'></i> Approuver</button>
+                    <button id='" . $row['id_doctor'] . "' class='btn btn-danger rejA'><i class='fa fa-close'></i> Rejeter</button>
                             
-                    <button id='" . $row[' id_doctor'] . "' class='btn btn-danger reject'> <i class='fa fa-close'></i> Rejeter</button>        
+                    <button id='" . $row['id_doctor'] . "' class='btn btn-success reject'> <i class='fa fa-check'></i> Approuver</button>        
                 </td>
             </tr>
         </tbody>

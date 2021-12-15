@@ -1,20 +1,20 @@
-<?php session_start();
+<?php
+
+session_start();
 
 include('../include/connexionDB.php');
 
-if (isset($_GET['valueInput'])) {
+$id = $_SESSION['rec']['id_doctor'];
 
-    $valueInput = $_GET['valueInput'];
+$res = "SELECT * FROM consultation, doctors, patient, specialite WHERE (consultation.id_doctor = doctors.id_doctor)
+   AND consultation.id_patient = patient.id_patient AND doctors.id_specialite = specialite.id_specialite AND doctors.id_doctor='$id'";
 
-    $req = "SELECT * FROM patient WHERE nom_patient like '%$valueInput%' OR postnom like '%$valueInput%'";
-    $result = mysqli_query($connect, $req);
-} else {
-    $req = "SELECT * FROM patient";
-    $result = mysqli_query($connect, $req);
-}
+$query = mysqli_query($connect, $res);
 
-$num = mysqli_num_rows($result);
+$num = mysqli_num_rows($query);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,10 +22,10 @@ $num = mysqli_num_rows($result);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/toastr.min.css">
-    <title>Dossiers | Patients</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" />
+    <title>Doctor | Espace private</title>
 </head>
-
 <style>
     td,
     th {
@@ -45,7 +45,7 @@ $num = mysqli_num_rows($result);
                         ?>
                     </div>
                     <div class="col-md-2" style="padding:0; margin-top:54px !important">
-                        <?php include('menuLeft.php');
+                        <?php include('menuDoct.php');
                         include('../include/functions.php') ?>
                     </div>
                     <div class="col-md-10" style="margin-top: 100px;">
@@ -60,7 +60,7 @@ $num = mysqli_num_rows($result);
                             </div>
                             <div class="col-md-6">
                                 <a href='newPatient.php'>
-                                    <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-plus"> </i> Nouveau patient</button>
+                                    <button class="btn btn-default" style="background:#f0f0f0"> <i class="fa fa-edit"> </i> Editer Profile</button>
                                 </a>
                             </div>
                         </div>
@@ -77,46 +77,39 @@ $num = mysqli_num_rows($result);
                                                 <th>Poids</th>
                                                 <th>Photo</th>
                                                 <th>Téléphone et Adresse</th>
-                                                <th>Consulté</th>
+                                                <th>Date d'enregistrement</th>
                                                 <th>Actions</th>
-
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            while ($patient = mysqli_fetch_array($result)) { ?>
+                                            while ($patient = mysqli_fetch_array($query)) { ?>
                                                 <tr>
                                                     <td><?php echo $patient['id_patient'] ?></td>
                                                     <td><?php echo $patient['nom_patient'] . '  ' . $patient['postnom'] . ' ' . $patient['prenom'] ?></td>
                                                     <td><?php echo $patient['sexe'] ?></td>
                                                     <td><?php echo $patient['poids'] ?> kg</td>
                                                     <td> <img style="width:50px; height: 50px; border-radius: 100%;" src="../images/<?php echo $patient['photo'] ?>" </td>
+                                                    <td>+243 <?php echo $patient['telephone'] ?></td>
+                                                    <td><?php echo $patient['date'] ?></td>
+                                                    <td style="width:220px; text-align:center">
 
-                                                    <td>+243 <?php echo $patient['telephone'] . ' , ' . $patient['description_patient'] ?></td>
-                                                    <td><?php if($patient['consulte'] == 1){ ?>
-                                                        <div class="alert alert-success"><i class="fa fa-check"></i> Consulté</div>
-                                                    <?php } ?> 
-                                                    <?php if($patient['consulte'] == 0){ ?>
-                                                        <div class="alert alert-info"> <i class="fa fa-spinner fa-spin"></i> En attente... </div>
-                                                    <?php } ?>
-                                                </td>
-                                                    
-                                                    <td style="width:310px; text-align:center">
-                                                        <a onclick="return confirm(' Etes-vous sûr de vouloir supprimer ce patient ?')" href='../traitement/deletePatient.php?id=<?php echo $patient['id_patient'] ?>'>
-                                                            <button class="btn btn-default"><i class="fa fa-trash "></i>
-                                                                Supprimer
-                                                            </button>
-                                                        </a>
-                                                        <a href='editPatient.php?id=<?php echo $patient['id_patient'] ?>'>
-                                                            <button class="btn btn-default"><i class="fa fa-edit"></i>
-                                                                Editer
-                                                            </button>
-                                                        </a>
-                                                        <a href='patients.php?id=<?php echo $patient['id_patient'] ?>'>
-                                                            <button class="btn btn-default"><i class="fa fa-user"></i>
-                                                                Détail
-                                                            </button>
-                                                        </a>
+                                                        <?php
+                                                        if ($patient['consulte'] == 1) {
+                                                            echo "<div class='alert alert-success'>Consulté 
+                                                                <i class='fa fa-check'></i>
+                                                            </div>";
+                                                        } else {
+                                                        ?>
+                                                            <i class="fa fa-spinner fa-spin"></i> En attente...
+                                                            <a href='noterPatient.php?id=<?php echo $patient['id_patient'] ?>'>
+                                                                <button class="btn btn-default"><i class="fa fa-edit"></i>
+                                                                    Noter
+                                                                </button>
+                                                            </a>
+                                                        <?php }
+                                                        ?>
+
                                                     </td>
 
                                                 </tr>

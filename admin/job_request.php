@@ -33,7 +33,7 @@ body {
                     <?php include('sideNav.php') ?>
                 </div>
                 <div class="col-md-10" style='margin-top:57px'>
-                    <h3>Demande d'emploi</h3>
+                    <h3>Confirmation compte</h3>
 
                     <div id="show"></div>
                 </div>
@@ -58,7 +58,7 @@ $(document).ready(function() {
         })
     }
 
-    $(document).on('click', '.approve', function() {
+    $(document).on('click', '.rejA', function() {
 
         let id = $(this).attr("id");
 

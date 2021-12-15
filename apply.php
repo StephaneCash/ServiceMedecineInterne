@@ -111,13 +111,9 @@ session_start();
                                 </div>
                             </div>
 
-
-
-
-
                             <input type="submit" name="apply" value="Créer un compte" class="btn btn-success">
 
-                            <p style="font-size:15px">Vous avez déjà un compte ? <a href="adminLogin.php"> Cliquer ici</a>
+                            <p style="font-size:15px">Vous avez déjà un compte ? <a href="doctorLogin.php"> Cliquer ici</a>
                             </p>
 
                     </form>

@@ -51,10 +51,6 @@ session_start();
                                                         <input type="text" required class="form-control" placeholder="Le nom" name="nom">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Entrer le nom</label>
-                                                        <input type="text" required class="form-control" placeholder="Le nom" name="nom">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label>Entrer le postnom</label>
                                                         <input type="text" required class="form-control" placeholder="Le postnom" name="postnom">
                                                     </div>

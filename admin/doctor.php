@@ -30,7 +30,7 @@ session_start();
                 <?php
 
 
-                $doctor = "SELECT * FROM doctors WHERE status='Approved' ORDER BY data_reg ASC";
+                $doctor = "SELECT * FROM doctors WHERE statut='Approved' ORDER BY data_reg ASC";
                 $res = mysqli_query($connect, $doctor);
 
                 $output = "";

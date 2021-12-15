@@ -20,23 +20,15 @@ if (isset($_POST['login'])) {
         $error['login'] = "Entrer votre username svp";
     } else if (empty($password)) {
         $error['login'] = "Entrer votre password svp";
-    } else if ($row['status'] == 'En attente') {
-        $error['login'] = "S'il vous plait veuillez patienter que l'Admin confirme votre compte";
-    } else if ($row['status'] == "Rejete") {
-        $error['login'] = "Essayer plus tard ";
-    }
-
+    } 
     if (count($error) == 0) {
 
-        $query = "SELECT * FROM doctors WHERE username = '$username' AND password='$password' ";
+        $query = "SELECT * FROM reception WHERE username = '$username' AND password='$password' ";
         $res = mysqli_query($connect, $query);
 
         if (mysqli_num_rows($res)) {
-            if($rec = mysqli_fetch_array($res)){
-                $_SESSION['rec'] = $rec;
-            }
             $_SESSION['doctor'] = $username;
-            header("Location:viewDoctors/doctorPrivate.php");
+            header("Location:viewDoctors/patients.php");
 
         } else {
 
@@ -96,7 +88,7 @@ include "include/header.php";
                 <div class="col-md-3"></div>
                 <div class="col-md-6 jumbotron">
                 <span class="glyphicon glyphicon-user" style="font-size:64px;"></span>
-                    <h4>Connexion Docteurs</h4>
+                    <h4>Connexion Réceptionniste</h4>
                     <div>
                         <?php echo $show; ?>
                     </div>
@@ -112,9 +104,7 @@ include "include/header.php";
                         </div>
 
                         <input type="submit" name="login" class="btn btn-success" value="Se connecter">
-                        <p style="font-size:16px">
-                            Si vous n'avez pas de compte <a href="apply.php" style='color:blue !important'>Créer ici !!</a>
-                        </p>
+                        
                     </form>
                 </div>
                 <div class="col-md-3"></div>

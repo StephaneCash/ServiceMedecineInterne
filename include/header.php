@@ -51,8 +51,8 @@ a {
                     echo "
                             <li class='nav-item'><a href='index.php' title='Accueil' class='nav-link' >Accueil</a></li>
                             <li class='nav-item'><a href='adminLogin.php' title='Admin' class='nav-link' >Admin</a></li>
-                            <li class='nav-item'><a href='doctorLogin.php' title='Docteur' class='nav-link' >Docteur</a></li>
-                            <li class='nav-item'><a href='' title='Patient' class='nav-link' ;>Patient</a></li>
+                            <li class='nav-item'><a href='recLogin.php' title='Réceptionniste' class='nav-link' >Réceptionniste</a></li>
+                            <li class='nav-item'><a href='doctorLogin.php' title='Docteur   ' class='nav-link' ;>Docteur</a></li>
                         ";
                 }
                 ?>

@@ -56,7 +56,7 @@ if (isset($_POST['apply'])) {
     }
     
     if (count($error) == 0) {
-        $query = "INSERT INTO doctors (noms, username, email, genre, phone, password, salaire, data_reg, status, profile)
+        $query = "INSERT INTO doctors (noms, username, email, genre, phone, password, salaire, data_reg, statut, profile)
             VALUES('$noms', '$username', '$email', '$genre', '$phone', '$password1', '0', NOW(), 'En attente', '$photo')";
 
         $result = mysqli_query($connect, $query);

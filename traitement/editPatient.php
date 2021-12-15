@@ -25,7 +25,7 @@ if (isset($_POST['editer_patient'])) {
     if (!empty($photo)) {
         $req = "UPDATE patient set nom_patient='$nom', postnom='$postnom', prenom='$prenom', 
                 sexe='$sexe', poids='$poids', photo='$photo', telephone='$telephone', 
-                date='$date', description='$description' WHERE id_patient = '$id_patient'";
+                date='$date', description_patient='$description' WHERE id_patient = '$id_patient'";
         $result = mysqli_query($connect, $req);
 
         if ($result) {
@@ -37,7 +37,7 @@ if (isset($_POST['editer_patient'])) {
     } else {
         $req = "UPDATE patient set nom_patient='$nom', postnom='$postnom', prenom='$prenom', 
                 sexe='$sexe', poids='$poids', telephone='$telephone', date='$date', 
-                description='$description' WHERE id_patient = '$id_patient'";
+                description_patient='$description' WHERE id_patient = '$id_patient'";
         $result = mysqli_query($connect, $req);
         if ($result) {
             editer("edit", "Edition du patient a été effectué avec succès");
