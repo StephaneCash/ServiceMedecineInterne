@@ -1,5 +1,14 @@
 <?php
 session_start();
+
+include('../include/connexionDB.php');
+
+$req = "SELECT * FROM specialite";
+$query = mysqli_query($connect, $req);
+
+$reqD = 'SELECT * FROM doctors';
+$queryD = mysqli_query($connect, $reqD);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,48 +56,32 @@ session_start();
                                             <div class="panel-body">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Entrer les noms</label>
-                                                        <input type="text" required class="form-control" placeholder="Le nom" name="nom">
-                                                    </div>
+                                                        <label>Sélectionnez un docteur</label>
+                                                        <select class="form-control" required name="specialite">
+                                                            <?php while ($specialite = mysqli_fetch_array($query)) {
+                                                                echo '<option value="' . $specialite[0] . '">' . $specialite[1] . '</option>';
+                                                            } ?>
 
-                                                    <div class="form-group">
-                                                        <label>Sélectionnez du sexe</label>
-                                                        <select class="form-control" required name="sexe">
-                                                            <option value="Homme">Homme</option>
-                                                            <option value="Femme">Femme</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Sélectionnez la spécialité</label>
-                                                        <select class="form-control" required name="sexe">
-                                                            <option value="Homme">-Choisir une spécialité-</option>
                                                         </select>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Chosir une photo</label>
-                                                        <input type="file" required class="form-control" placeholder="Le postnom" name="photo">
-                                                    </div>
+                                                    <label>Sélectionnez la spécialité</label>
+                                                    <select class="form-control" required name="doctor">
+                                                        <?php while ($doct = mysqli_fetch_array($queryD)) {
+                                                            echo '<option value="' . $doct[0] . '">' . $doct[1] . '</option>';
+                                                        } ?>
 
-                                                    <div class="form-group">
-                                                        <label>Entrer le numéro du téléphone</label>
-                                                        <input type="number" required class="form-control" placeholder="Le numéro de téléphone" name="phone">
-                                                    </div>
-                                                    
-                                                    <div class="form-group">
-                                                        <label>Entrer l'email</label>
-                                                        <input type="email" required class="form-control" placeholder="L'email" name="nom">
-                                                    </div>
+                                                    </select>
                                                 </div>
                                             </div>
 
                                             <div class="row" style="padding:10px 45px">
                                                 <a style="float:left; color:black !important" href="doctors.php">Retour sur la page de doctors </a>
-                                                <button class="btn btn-default" style="float:right;background:#f0f0f0" name="ajouter_patient"> <i class="fa fa-plus"></i> Ajouter un nouveau Docteur</button>
+                                                <button class="btn btn-default" style="float:right;background:#f0f0f0" name="ajouter_doctor"> <i class="fa fa-plus"></i> Ajouter un nouveau Docteur</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                             </form>

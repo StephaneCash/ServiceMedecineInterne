@@ -31,6 +31,12 @@ if (isset($_POST['apply'])) {
     $password1 = $_POST['password1'];
     $password2 = $_POST['password2'];
 
+    $photo = isset($_FILES['photo']['name']) ? $_FILES['photo']['name'] : "";
+    $Img_temp = $_FILES['photo']['tmp_name'];
+    move_uploaded_file($Img_temp, "../images/" . $photo);
+
+    echo $photo;
+
     $error = array();
 
     if (empty($noms)) {
@@ -48,10 +54,10 @@ if (isset($_POST['apply'])) {
     } else if ($password2 != $password1) {
         $error['apply'] = "Les deux mots de passe ne correspondent pas !";
     }
-
+    
     if (count($error) == 0) {
         $query = "INSERT INTO doctors (noms, username, email, genre, phone, password, salaire, data_reg, status, profile)
-            VALUES('$noms', '$username', '$email', '$genre', '$phone', '$password1', '0', NOW(), 'En attente', 'cash.jpg')";
+            VALUES('$noms', '$username', '$email', '$genre', '$phone', '$password1', '0', NOW(), 'En attente', '$photo')";
 
         $result = mysqli_query($connect, $query);
 

@@ -85,8 +85,8 @@ $num = mysqli_num_rows($result);
                                                         <td><?php echo $service['id_doctor'] ?></td>
                                                         <td><?php echo $service['noms'] ?></td>
                                                         <td><?php echo $service['nom_specialite'] ?></td>
-                                                        <td><?php echo $service['email'] . ' , ' .$service['phone'] ?></td>
-                                                        <th><img style="width:50px; height: 50px; border-radius: 100%;" src="../admin/img/<?php echo $service['profile'] ?>"</th>
+                                                        <td><?php echo $service['email'] . ' , ' . $service['phone'] ?></td>
+                                                        <th><img style="width:50px; height: 50px; border-radius: 100%;" src="../admin/img/<?php echo $service['profile'] ?>" </th>
                                                         <td style="width:220px; text-align:center">
                                                             <a onclick="return confirm(' Etes-vous sûr de vouloir supprimer ce service ?')" href='../traitement/deleteService.php?id=<?php echo $service['id_specialite'] ?>'>
                                                                 <button class="btn btn-default"><i class="fa fa-trash "></i>
